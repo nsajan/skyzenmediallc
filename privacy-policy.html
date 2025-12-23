@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy - Skyzen Media LLC">
+    <title>Privacy Policy - Skyzen Media LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #0ea5e9;
+            --accent-color: #7c3aed;
+            --dark-bg: #0a0a0f;
+            --dark-card: #1a1a24;
+            --dark-card-hover: #252532;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 100%);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Page Header */
+        .page-header {
+            margin-top: 80px;
+            background: var(--dark-bg);
+            position: relative;
+            padding: 80px 2rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: var(--dark-card);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-card h2 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        .content-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .content-card ul {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .content-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .content-card a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer p:first-child {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Skyzen Media LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: December 2024</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-card">
+            <h2>Introduction</h2>
+            <p>
+                Skyzen Media LLC ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+            </p>
+            <p>
+                Please read this Privacy Policy carefully. By accessing or using our services, you agree to this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not access our services.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Information We Collect</h2>
+
+            <h3>Personal Information</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Fill out our contact form</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Opt-in to receive SMS/text message communications</li>
+                <li>Request information about our products or services</li>
+                <li>Communicate with us via email, phone, or other means</li>
+            </ul>
+            <p>This information may include:</p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number (including mobile phone number for SMS communications)</li>
+                <li>Company name</li>
+                <li>Any other information you choose to provide</li>
+            </ul>
+
+            <h3>Automatically Collected Information</h3>
+            <p>When you visit our website, we may automatically collect certain information about your device, including:</p>
+            <ul>
+                <li>IP address</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Referring website addresses</li>
+                <li>Pages viewed and time spent on pages</li>
+                <li>Date and time of visits</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>How We Use Your Information</h2>
+            <p>We may use the information we collect for various purposes, including:</p>
+            <ul>
+                <li>To respond to your inquiries and provide customer support</li>
+                <li>To send you updates about our products and services</li>
+                <li>To improve our website and services</li>
+                <li>To analyze usage patterns and trends</li>
+                <li>To protect against fraudulent or unauthorized activity</li>
+                <li>To comply with legal obligations</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>SMS/Text Message Communications</h2>
+            <p>
+                If you opt-in to receive SMS/text message communications from Skyzen Media LLC, we collect your mobile phone number for the purpose of sending you text messages related to our services, updates, alerts, and other communications you have consented to receive.
+            </p>
+            <p>
+                <strong>Important:</strong> We do not sell, rent, share, or trade your mobile phone number or any personal information collected in connection with our SMS program to third parties or affiliates for marketing or promotional purposes. Your phone number will only be used to send you the messages you have opted-in to receive.
+            </p>
+            <p>
+                Message frequency may vary. Message and data rates may apply. You can opt-out of receiving SMS messages at any time by replying "STOP" to any message you receive from us. After opting out, you will receive a one-time confirmation message, and no further messages will be sent unless you re-subscribe.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Information Sharing</h2>
+            <p><strong>We do not sell, rent, or share your personal information, including your mobile phone number, to third parties or affiliates for marketing or promotional purposes.</strong></p>
+            <p>We may share your information only in the following limited circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting our business, subject to confidentiality agreements. These providers are prohibited from using your information for their own marketing purposes.</li>
+                <li><strong>Legal Requirements:</strong> We may disclose information when required by law or to protect our rights, property, or safety.</li>
+                <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred to the acquiring entity, who will be bound by similar privacy protections.</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>Data Security</h2>
+            <p>
+                We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Cookies and Tracking Technologies</h2>
+            <p>
+                We may use cookies and similar tracking technologies to enhance your experience on our website. Cookies are small data files stored on your device that help us understand how you use our site. You can control cookie settings through your browser preferences.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Your Rights and Choices</h2>
+            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+            <ul>
+                <li>The right to access your personal information</li>
+                <li>The right to correct inaccurate information</li>
+                <li>The right to delete your personal information</li>
+                <li>The right to opt-out of marketing communications</li>
+                <li>The right to data portability</li>
+            </ul>
+
+            <h3>Opting Out of SMS Communications</h3>
+            <p>You can stop receiving SMS messages from us at any time by:</p>
+            <ul>
+                <li>Replying "STOP" to any SMS message you receive from us</li>
+                <li>Contacting us directly using the information provided below</li>
+            </ul>
+            <p>After you opt-out, you will receive a final confirmation message. Please note that opting out of SMS messages will not affect other communications you may receive from us, such as email.</p>
+
+            <p>To exercise any of these rights, please contact us using the information provided below.</p>
+
+            <div class="section-divider"></div>
+
+            <h2>Children's Privacy</h2>
+            <p>
+                Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Changes to This Privacy Policy</h2>
+            <p>
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically for any changes.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
+            <p>
+                <strong>Skyzen Media LLC</strong><br>
+                113 Lotus Cv<br>
+                Georgetown, TX 78628<br>
+                Website: <a href="index.html">skyzenmediallc.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Skyzen Media LLC. All rights reserved.</p>
+        <p>Building the future of conversational technology</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service - Skyzen Media LLC">
+    <title>Terms of Service - Skyzen Media LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #0ea5e9;
+            --accent-color: #7c3aed;
+            --dark-bg: #0a0a0f;
+            --dark-card: #1a1a24;
+            --dark-card-hover: #252532;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 100%);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark-bg);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Page Header */
+        .page-header {
+            margin-top: 80px;
+            background: var(--dark-bg);
+            position: relative;
+            padding: 80px 2rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-card {
+            background: var(--dark-card);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-card h2 {
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .content-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        .content-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .content-card ul {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .content-card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .content-card a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+            margin: 2.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer p:first-child {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Skyzen Media LLC</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Terms of Service</h1>
+        <p>Last updated: December 2024</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-card">
+            <h2>Agreement to Terms</h2>
+            <p>
+                These Terms of Service ("Terms") govern your access to and use of the website and services provided by Skyzen Media LLC ("Company," "we," "our," or "us"). By accessing or using our services, you agree to be bound by these Terms.
+            </p>
+            <p>
+                If you do not agree to these Terms, you may not access or use our services. We reserve the right to modify these Terms at any time, and such modifications will be effective immediately upon posting.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Use of Services</h2>
+
+            <h3>Eligibility</h3>
+            <p>
+                By using our services, you represent and warrant that you are at least 18 years of age and have the legal capacity to enter into these Terms. If you are using our services on behalf of a company or organization, you represent that you have the authority to bind that entity to these Terms.
+            </p>
+
+            <h3>Permitted Use</h3>
+            <p>You agree to use our services only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+            <ul>
+                <li>Use our services in any way that violates applicable laws or regulations</li>
+                <li>Attempt to gain unauthorized access to our systems or networks</li>
+                <li>Interfere with or disrupt the integrity or performance of our services</li>
+                <li>Transmit any viruses, malware, or other harmful code</li>
+                <li>Collect or harvest information about other users</li>
+                <li>Use our services to send unsolicited communications</li>
+                <li>Impersonate any person or entity</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>Intellectual Property</h2>
+
+            <h3>Our Content</h3>
+            <p>
+                All content on our website, including text, graphics, logos, images, software, and other materials, is the property of Skyzen Media LLC or our licensors and is protected by copyright, trademark, and other intellectual property laws.
+            </p>
+
+            <h3>Limited License</h3>
+            <p>
+                We grant you a limited, non-exclusive, non-transferable license to access and use our services for your personal or internal business purposes. This license does not include the right to:
+            </p>
+            <ul>
+                <li>Modify, copy, or distribute our content</li>
+                <li>Use our content for commercial purposes without permission</li>
+                <li>Remove any copyright or proprietary notices</li>
+                <li>Create derivative works based on our content</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>Products and Services</h2>
+            <p>
+                We offer various technology products and services, including conversational applications and AI solutions. Specific terms and conditions may apply to individual products or services, which will be provided at the time of purchase or subscription.
+            </p>
+            <p>
+                We reserve the right to modify, suspend, or discontinue any product or service at any time without notice. We will not be liable to you or any third party for any modification, suspension, or discontinuation of our products or services.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>SMS/Text Message Communications</h2>
+            <p>
+                By providing your mobile phone number and opting in to receive SMS/text messages from Skyzen Media LLC, you expressly consent to receive text messages from us at the phone number you provided. These messages may include service updates, alerts, promotional information, and other communications related to our products and services.
+            </p>
+
+            <h3>Consent</h3>
+            <p>
+                By opting in to our SMS program, you confirm that you are the owner or authorized user of the mobile device and phone number provided, and you consent to receive text messages from Skyzen Media LLC. Consent to receive SMS messages is not a condition of purchasing any goods or services.
+            </p>
+
+            <h3>Message Frequency</h3>
+            <p>
+                Message frequency may vary depending on your interactions with our services. You may receive up to 10 messages per month, though this may vary based on your account activity and preferences.
+            </p>
+
+            <h3>Opting Out</h3>
+            <p>
+                You may opt-out of receiving SMS messages at any time by replying "STOP" to any text message you receive from us. Upon receiving your opt-out request, we will send you a one-time confirmation message, and you will no longer receive SMS messages from us unless you re-subscribe. You may also opt-out by contacting us directly.
+            </p>
+
+            <h3>Costs and Carrier Liability</h3>
+            <p>
+                Message and data rates may apply depending on your mobile carrier and plan. Skyzen Media LLC is not responsible for any charges incurred from your mobile carrier. We are also not liable for any delays, failures in delivery, or other issues related to the transmission or receipt of text messages that are caused by your mobile carrier or other factors outside of our control.
+            </p>
+
+            <h3>Help</h3>
+            <p>
+                For help or more information about our SMS program, reply "HELP" to any message you receive from us, or contact us using the information provided at the end of these Terms.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>User Communications</h2>
+            <p>
+                When you contact us through our website or other means, you grant us the right to use, reproduce, and process your communications for the purpose of responding to your inquiries and improving our services. Any feedback, suggestions, or ideas you provide become our property and may be used without compensation to you.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Disclaimer of Warranties</h2>
+            <p>
+                OUR SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+            </p>
+            <p>
+                We do not warrant that our services will be uninterrupted, error-free, or secure. We do not warrant the accuracy, reliability, or completeness of any information provided through our services.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Limitation of Liability</h2>
+            <p>
+                TO THE MAXIMUM EXTENT PERMITTED BY LAW, SKYZEN MEDIA LLC SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF OUR SERVICES.
+            </p>
+            <p>
+                OUR TOTAL LIABILITY FOR ANY CLAIMS ARISING UNDER THESE TERMS SHALL NOT EXCEED THE AMOUNT YOU PAID TO US, IF ANY, FOR THE USE OF OUR SERVICES DURING THE TWELVE (12) MONTHS PRECEDING THE CLAIM.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Indemnification</h2>
+            <p>
+                You agree to indemnify, defend, and hold harmless Skyzen Media LLC and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney's fees, arising out of or related to:
+            </p>
+            <ul>
+                <li>Your use of our services</li>
+                <li>Your violation of these Terms</li>
+                <li>Your violation of any rights of a third party</li>
+                <li>Any content you submit or transmit through our services</li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2>Governing Law</h2>
+            <p>
+                These Terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved in the state or federal courts located in Williamson County, Texas.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Severability</h2>
+            <p>
+                If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Entire Agreement</h2>
+            <p>
+                These Terms, together with our Privacy Policy and any other agreements expressly incorporated by reference, constitute the entire agreement between you and Skyzen Media LLC regarding your use of our services.
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about these Terms of Service, please contact us at:</p>
+            <p>
+                <strong>Skyzen Media LLC</strong><br>
+                113 Lotus Cv<br>
+                Georgetown, TX 78628<br>
+                Website: <a href="index.html">skyzenmediallc.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Skyzen Media LLC. All rights reserved.</p>
+        <p>Building the future of conversational technology</p>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
